@@ -4,6 +4,7 @@ import '../style/post.scss'
 import { usePost } from '../hook/Post.hook.jsx';
 import { useEffect } from 'react';
 import Post from '../components/post.jsx';
+import Navbar from '../../shared/components/Navbar.jsx';
 
 
 const Feed = () => {
@@ -21,6 +22,7 @@ const Feed = () => {
    
   return (
     <div className='post-container'>
+      <Navbar/>
         {
             post.map((post)=>{
               return <Post post={post}/>

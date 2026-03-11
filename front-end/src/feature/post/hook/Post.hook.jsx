@@ -6,8 +6,9 @@ import { useEffect } from "react";
 
 export function usePost(){
     const context = useContext(PostContext);
-    const {loading, setLoading, feed, setFeed} = context;
-
+    const {loading, setLoading, feed, setFeed,togglePostForm, setTogglePostForm} = context;
+    
+    //Feed handler 
     const handleFeed = async ()=>{
         setLoading(true);
         const data = await getfeed();
@@ -17,10 +18,18 @@ export function usePost(){
 
 
     }
+    //Form toggle handler
+    const handleToggleForm = ()=>{
+        if(!togglePostForm)
+        return setTogglePostForm(true)
+        setTogglePostForm(false)
+
+
+    }
    
 
     return(
-        {loading, feed, handleFeed}
+        {loading, feed, handleFeed, handleToggleForm, togglePostForm}
     )
 
 

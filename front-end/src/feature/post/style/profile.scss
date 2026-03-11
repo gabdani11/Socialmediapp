@@ -1,0 +1,143 @@
+.profilePage{
+    display: flex;
+    
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(240, 240, 240);
+   .container{
+    display: flex;
+    flex-direction: column  ;
+    width: 50%;
+    
+    
+    .profileUserDetail{
+        display: flex;
+        padding-top:1rem;
+        
+        
+        height: fit-content;
+        align-items: center;
+        gap: 2rem;
+        img{
+            width: 10rem;
+            height: 10rem;
+            border-radius: 100%;
+            object-fit: cover;
+        }
+        .profilename{
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            h5{
+                font-weight: 500;
+            }
+        }
+    }
+    .profilePostDetail{
+        padding-top: 1rem;
+
+        
+        height: 100%;
+        .postCreation{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            background-color: rgba(192, 189, 189, 0.425);
+            width: 30%;
+            height: 50%;
+            cursor: pointer;
+        }
+        
+    }
+   }
+   .postUpload{
+            background-color: rgba(232, 232, 232, 0.541);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            
+            form {
+                display: flex;
+                flex-direction: column;
+                background-color: white;
+                border-radius: 10px;
+                 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                .top{
+                    display: flex;
+                    gap: 10rem;
+                    padding: 1rem;
+                    border-bottom: 1px solid rgba(222, 220, 220, 0.411);
+                    .heading{
+                        display: flex;
+                        align-items: center;
+                        gap: 1rem;
+                        #closeBtn{
+                            cursor: pointer;
+                        }
+                    }
+                    button{
+                        padding: 0.5rem 1rem;
+                        border: none;
+                        font-weight: 600;
+                        border-radius: 5px;
+                    }
+                    
+                }
+                .middle{
+                    padding: 1rem;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1rem;
+                    .username{
+                        display: flex;
+                        align-items: center;
+                        gap: 0.2rem;
+
+                    img{
+                        height: 2.5rem;
+                        width: 2.5rem;
+                        object-fit: cover;
+                        border-radius: 50px;
+                    }
+                }
+                textarea{
+                    resize: none;
+                    width: 100%;
+                    min-height: 6rem;
+                    border: none;
+                    outline: none;
+                }
+                .file{
+                    display: flex;
+                    width: 100%;
+                    align-items: center;
+                    justify-content: center;
+                    border: dotted 2px rgba(128, 128, 128, 0.425);
+                    border-radius: 10px;
+                    min-height: 15rem;
+                    input{
+                        display: none;
+
+                    }
+                    label{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        cursor: pointer;
+
+
+                    }
+                }
+                
+                }
+            }
+            
+            
+            
+        }
+}
