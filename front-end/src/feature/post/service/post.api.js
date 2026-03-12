@@ -13,3 +13,14 @@ export async function getfeed() {
     throw error;
   }
 }
+export async function postCreation(imageFile, caption){
+  try{
+    const formData = new FormData(); //This just creates an empty FormData object — like an empty container ready to hold data.
+    formData.append('image',imageFile)
+    formData.append('caption',caption)//You then add data to it using .append():
+    const response = await api.post('/',formData);
+    return response.data
+  }catch(error){
+    throw error;
+  }
+}

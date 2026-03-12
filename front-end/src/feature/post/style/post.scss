@@ -34,7 +34,6 @@
     width: 100%;
     max-width: 440px; /* optional container width */
     aspect-ratio: 4 / 5;
-   
     overflow: hidden;
 
 
@@ -43,9 +42,11 @@ img {
     height: 100%;
     object-fit: cover; /* fills the container like Instagram */
     display: block;
+    
 }
 
     }
+    
     .bottom{
         padding: 0.5rem 1rem;
         display: flex;

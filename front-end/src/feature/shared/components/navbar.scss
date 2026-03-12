@@ -9,6 +9,11 @@
         justify-content: space-between;
         padding: 0rem 1.5rem;
 
+        h1{
+            font-family: 'MyFontItalic';
+            color: var(--PrimaryColor);
+        }
+
         .right{
             display: flex;
             align-items: center;

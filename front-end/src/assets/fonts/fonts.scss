@@ -1,0 +1,15 @@
+// src/styles/_fonts.scss
+@font-face {
+  font-family: 'MyFont';
+  src: url('./Switzer-Variable.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; // improves loading performance
+}
+@font-face {
+  font-family: 'MyFontItalic';
+  src: url('./Switzer-VariableItalic.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; // improves loading performance
+}

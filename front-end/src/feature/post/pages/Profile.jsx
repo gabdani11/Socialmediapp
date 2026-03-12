@@ -4,8 +4,11 @@ import Navbar from '../../shared/components/Navbar'
 import { RiAddLargeLine } from '@remixicon/react'
 import Postupload from '../components/Postuploadform'
 import { usePost } from '../hook/Post.hook'
+import { useAuth } from '../../auth/hooks/useAuth'
 const Profile = () => {
     const {togglePostForm, handleToggleForm} = usePost();
+    const {user} = useAuth()
+    console.log(user)
     function toggleForm(){
         handleToggleForm();
 
@@ -20,10 +23,10 @@ const Profile = () => {
     <div className='profilePage'>
      <div className="container">
         <div className="profileUserDetail">
-        <img src="https://t3.ftcdn.net/jpg/06/01/50/96/360_F_601509638_jDwIDvlnryPRhXPsBeW1nXv90pdlbykC.jpg" alt="" />
+        <img src={user.profileImage} alt="" />
         <div className='profilename'>
-            <h4>Username</h4>
-        <h5>This is bio</h5>
+            <h4>{user.username}</h4>
+        <h5>{user.bio}</h5>
         </div>
         
 

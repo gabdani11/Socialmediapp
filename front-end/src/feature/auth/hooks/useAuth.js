@@ -9,7 +9,6 @@ import {login, register, getme} from '../services/auth.api.jsx'
 export function useAuth(){  //exporting so this can be used anywhere
     const context = useContext(AuthContext)
     const {user, setUser, loading, setLoading} = context; //destructure the context
-
   const handleLogin = async(username, password)=>{
     setLoading(true);
     const response = await login(username, password); //calling api.js function 
@@ -28,9 +27,17 @@ export function useAuth(){  //exporting so this can be used anywhere
 
 
   }
+  //get user detail 
+  const handleGetMeUserDetail = async ()=>{
+    const response = await getme();
+    setUser(response.data)
+    console.log(response)
+    
+
+  }
 
   return (
-    {user, loading, handleLogin, handleRegister} //sending to ux layer 
+    {user, loading, handleLogin, handleRegister, handleGetMeUserDetail} //sending to ux layer 
   )
 
 

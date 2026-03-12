@@ -1,5 +1,6 @@
 import React from 'react'
 import '../style/post.scss'
+import { useAuth } from '../../auth/hooks/useAuth.js';
 
 import { usePost } from '../hook/Post.hook.jsx';
 import { useEffect } from 'react';
@@ -9,11 +10,14 @@ import Navbar from '../../shared/components/Navbar.jsx';
 
 const Feed = () => {
     const {loading, feed, handleFeed} = usePost();
+    const {handleGetMeUserDetail} = useAuth();
 
     useEffect(()=>{
         handleFeed();
+        handleGetMeUserDetail();
 
     },[])
+    
      if(loading || !feed){
         return (<main><h1>Feed is loading...</h1></main>)
     }
@@ -24,7 +28,7 @@ const Feed = () => {
     <div className='post-container'>
       <Navbar/>
         {
-            post.map((post)=>{
+            post.toReversed().map((post)=>{
               return <Post post={post}/>
             })
         }

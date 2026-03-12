@@ -1,4 +1,4 @@
-import { getfeed } from "../service/post.api.js"; // api import
+import { getfeed, postCreation } from "../service/post.api.js"; // api import
 import { useContext } from "react";
 import { PostContext } from "../post.context.jsx";
 import { useEffect } from "react";
@@ -26,10 +26,19 @@ export function usePost(){
 
 
     }
+    //postcreation
+    const handlePostCreation = async (imageFile, caption ) =>{
+        setLoading(true);
+        const response = await postCreation(imageFile, caption)
+        setLoading(false);
+        return response
+
+
+    }
    
 
     return(
-        {loading, feed, handleFeed, handleToggleForm, togglePostForm}
+        {loading, feed, handleFeed, handleToggleForm, togglePostForm, setTogglePostForm, handlePostCreation}
     )
 
 

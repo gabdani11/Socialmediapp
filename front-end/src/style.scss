@@ -1,9 +1,15 @@
+@use './assets/fonts/fonts.scss';
+:root{
+  --PrimaryColor:rgb(132, 213, 10);
+}
 * , *::before, *::after { box-sizing: border-box;
 margin: 0;
 padding: 0; }
+
 html, body {
   height: 100%;
  width: 100%;
-  font-family: Inter, system-ui, sans-serif;
+  font-family:'MyFont', Inter, sans-serif;
   
 }
+
